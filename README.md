@@ -13,19 +13,19 @@ npx @rkdfx/skillfox list --type skill
 npx @rkdfx/skillfox list --tag git
 
 # Install a skill to all detected agents
-npx @rkdfx/skillfox install commit-message
+npx @rkdfx/skillfox install repo-overview
 
 # Install to a specific agent
-npx @rkdfx/skillfox install commit-message --agent claude
+npx @rkdfx/skillfox install repo-overview --agent claude
 
 # Install everything
 npx @rkdfx/skillfox install --all
 
 # Install to project scope instead of user scope
-npx @rkdfx/skillfox install commit-message --scope project
+npx @rkdfx/skillfox install repo-overview --scope project
 
 # Uninstall
-npx @rkdfx/skillfox uninstall commit-message
+npx @rkdfx/skillfox uninstall repo-overview
 ```
 
 ## How It Works
@@ -45,8 +45,25 @@ Skills follow the [Agent Skills](https://agentskills.io) open standard (`SKILL.m
 
 | Name | Type | Agents | Description |
 |------|------|--------|-------------|
-| hello-world | skill | all | Sample greeting skill |
-| commit-message | skill | all | Generate conventional commit messages from staged changes |
+| repo-overview | skill | all | Structured mental model of a codebase — architecture, entry points, "start here" files |
+| trace-flow | skill | all | Trace a feature or operation end-to-end with file paths and data shapes |
+| extract-concepts | skill | all | Extract domain vocabulary, patterns, abstractions, and implicit rules |
+| explore-guide | skill | all | Meta-guide: how to use the three skills together, depth strategy, anti-patterns |
+
+All skills support **depth hints** (`shallow` / `deep`) to control scope vs. detail.
+
+### Recommended Workflow
+
+```
+1. /repo-overview          → WHERE things are (architecture, start-here files)
+2. /extract-concepts       → HOW the team thinks (vocabulary, concept map)
+3. /trace-flow [operation] → WHAT actually happens at runtime
+
+First pass: all three at shallow depth (~15 min)
+Second pass: go deep on your working area only
+```
+
+Run `/explore-guide` for the full workflow, depth strategy, and anti-patterns.
 
 ## Adding New Content
 

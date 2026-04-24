@@ -1,16 +1,30 @@
 version: 1
 
 items:
-  - name: hello-world
+  - name: repo-overview
     type: skill
-    path: content/skills/hello-world
-    description: "Sample greeting skill — verify skillfox installation works"
+    path: content/skills/repo-overview
+    description: "Generate a structured mental model of an unfamiliar codebase — architecture, entry points, data flow, conventions"
     agents: [claude, codex, gemini, cursor]
-    tags: [sample]
+    tags: [codebase-understanding, onboarding]
 
-  - name: commit-message
+  - name: trace-flow
     type: skill
-    path: content/skills/commit-message
-    description: "Generate conventional commit messages from staged changes"
+    path: content/skills/trace-flow
+    description: "Trace a feature or operation through the codebase end-to-end with file paths and data shapes"
     agents: [claude, codex, gemini, cursor]
-    tags: [git, productivity]
+    tags: [codebase-understanding, debugging]
+
+  - name: extract-concepts
+    type: skill
+    path: content/skills/extract-concepts
+    description: "Extract domain vocabulary, design patterns, abstractions, and implicit rules from a codebase"
+    agents: [claude, codex, gemini, cursor]
+    tags: [codebase-understanding, onboarding]
+
+  - name: explore-guide
+    type: skill
+    path: content/skills/explore-guide
+    description: "Guide for using repo-overview, extract-concepts, and trace-flow together — workflow, depth strategy, and anti-patterns"
+    agents: [claude, codex, gemini, cursor]
+    tags: [codebase-understanding, onboarding, guide]
