@@ -1,0 +1,44 @@
+{
+  "name": "@rkdfx/skillfox",
+  "version": "0.1.0",
+  "description": "Simple CLI to install AI coding agent skills, commands, and agents across Claude Code, Codex, Gemini CLI, and Cursor",
+  "type": "module",
+  "bin": {
+    "skillfox": "./bin/skillfox.mjs"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "content/",
+    "catalog.yaml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "node --test dist/tests/"
+  },
+  "keywords": [
+    "ai",
+    "skills",
+    "claude-code",
+    "codex",
+    "gemini-cli",
+    "cursor",
+    "agent-skills"
+  ],
+  "author": "rkdfx",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.0",
+    "commander": "^13.0.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

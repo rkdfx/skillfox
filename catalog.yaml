@@ -1,0 +1,16 @@
+version: 1
+
+items:
+  - name: hello-world
+    type: skill
+    path: content/skills/hello-world
+    description: "Sample greeting skill — verify skillfox installation works"
+    agents: [claude, codex, gemini, cursor]
+    tags: [sample]
+
+  - name: commit-message
+    type: skill
+    path: content/skills/commit-message
+    description: "Generate conventional commit messages from staged changes"
+    agents: [claude, codex, gemini, cursor]
+    tags: [git, productivity]
