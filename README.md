@@ -6,17 +6,19 @@ Supports **Claude Code**, **Codex CLI**, **Gemini CLI**, and **Cursor**.
 
 ## Usage
 
+Run directly from GitHub (no npm publish needed):
+
 ```bash
 # List available items
-npx @rkdfx/skillfox list
-npx @rkdfx/skillfox list --type skill
-npx @rkdfx/skillfox list --tag git
+npx github:rkdfx/skillfox list
+npx github:rkdfx/skillfox list --type skill
+npx github:rkdfx/skillfox list --tag git
 
 # Install a skill to all detected agents
-npx @rkdfx/skillfox install repo-overview
+npx github:rkdfx/skillfox install repo-overview
 
 # Install to a specific agent
-npx @rkdfx/skillfox install repo-overview --agent claude
+npx github:rkdfx/skillfox install repo-overview --agent claude
 
 # Install everything
 npx @rkdfx/skillfox install --all
