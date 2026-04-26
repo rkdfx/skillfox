@@ -28,3 +28,31 @@ items:
     description: "Guide for using repo-overview, extract-concepts, and trace-flow together — workflow, depth strategy, and anti-patterns"
     agents: [claude, codex, gemini, cursor]
     tags: [codebase-understanding, onboarding, guide]
+
+  - name: dev-setup
+    type: skill
+    path: content/skills/dev-setup
+    description: "Identify everything needed to build, run, and develop locally — env vars, services, bootstrap steps"
+    agents: [claude, codex, gemini, cursor]
+    tags: [codebase-understanding, onboarding, setup]
+
+  - name: dep-landscape
+    type: skill
+    path: content/skills/dep-landscape
+    description: "Map external dependencies — what they do, which are critical, version health, upgrade pressure"
+    agents: [claude, codex, gemini, cursor]
+    tags: [codebase-understanding, dependencies, health]
+
+  - name: test-strategy
+    type: skill
+    path: content/skills/test-strategy
+    description: "Map how testing is done — frameworks, patterns, coverage distribution, write-your-first-test template"
+    agents: [claude, codex, gemini, cursor]
+    tags: [codebase-understanding, testing, onboarding]
+
+  - name: api-surface
+    type: skill
+    path: content/skills/api-surface
+    description: "Inventory everything this project exposes — endpoints, CLI commands, library exports, event contracts"
+    agents: [claude, codex, gemini, cursor]
+    tags: [codebase-understanding, api, contracts]
