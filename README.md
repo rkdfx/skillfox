@@ -6,7 +6,7 @@ Supports **Claude Code**, **Codex CLI**, **Gemini CLI**, and **Cursor**.
 
 ## Usage
 
-Run directly from GitHub (no npm publish needed):
+Run directly from GitHub:
 
 ```bash
 # List available items
