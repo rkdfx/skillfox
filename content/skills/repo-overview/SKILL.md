@@ -14,7 +14,7 @@ The user provides one of:
 - A subsystem or directory to focus on
 - A depth hint: `shallow` (quick scan, 2–3 minutes) or `deep` (thorough, 10+ minutes)
 
-Default depth is **shallow** unless the user asks for deep.
+Default depth is **shallow** unless the user asks for deep. After producing the initial overview, ask if they want to dive deeper into any area.
 
 ## Process
 
@@ -61,7 +61,8 @@ This is the most actionable section. Prioritize files that unlock the most under
 ### Step 5: Contribution Context
 If this is an open source project, note:
 - Does CONTRIBUTING.md exist? Summarize the key process points.
-- Are there "good first issue" labels or an onboarding guide?
+- Are there coding standards or style guides mentioned?
+- Are there any readings or resources recommended for newcomers? 
 - What does the PR/review process look like? (CI checks, required reviewers, etc.)
 - Skip this section for private/internal repos.
 
