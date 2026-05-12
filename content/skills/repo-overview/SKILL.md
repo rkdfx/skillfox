@@ -36,6 +36,13 @@ Produce a layered summary:
 - **Core modules**: The 3–5 most important directories or packages. For each: name, responsibility, and what it depends on.
 - **Data flow**: How does data enter the system, get transformed, and exit? Describe the primary path in 3–5 steps.
 - **External boundaries**: What external systems does this code talk to? (databases, APIs, queues, file systems, third-party services)
+- **High-level diagrams**: Include concise architecture and flow diagrams. Prefer Mermaid when supported; otherwise use compact ASCII diagrams. Keep them at the component/module level, not class/function level.
+
+For diagrams:
+- Include one **architecture diagram** showing entry points, core modules, and external boundaries.
+- Include one **primary flow diagram** showing the main happy-path flow through the system.
+- Keep diagrams readable: roughly 5-9 nodes, simple labels, and only the most important arrows.
+- For large repos where you stop early, include only a top-level architecture diagram and omit the flow diagram until the user picks a subsystem.
 
 ### Step 3: Start Here
 Identify the **top 5 files a newcomer should read first**, in order. For each:
@@ -79,6 +86,13 @@ If depth is **deep**, identify recently active areas:
 [X files, Y top-level modules. Monorepo: yes/no]
 
 ## Architecture
+### Architecture Diagram
+```mermaid
+flowchart TD
+	Entry[Entry Points] --> Core[Core Modules]
+	Core --> Boundary[External Boundaries]
+```
+
 ### Entry Points
 - ...
 
@@ -90,6 +104,13 @@ If depth is **deep**, identify recently active areas:
 ### Data Flow
 1. ...
 2. ...
+
+### Primary Flow Diagram
+```mermaid
+flowchart LR
+	Input[Input] --> Transform[Core Processing]
+	Transform --> Output[Output]
+```
 
 ### External Boundaries
 - ...
@@ -125,6 +146,8 @@ Read these files in order:
 - Do NOT list every file or directory. Focus on the 20% that explains 80% of the system.
 - If this is a monorepo or large repo (500+ files), stop after the top-level map and ask the user to pick a subsystem. Do not try to analyze everything at once.
 - The "Start Here" section is mandatory. If you can only produce one section, produce this one.
+- Diagrams must stay high-level. Do not draw class-level or function-level graphs.
+- If Mermaid is unavailable or likely unsupported, fall back to a small ASCII diagram instead of skipping diagrams.
 
 ## Example Usage
 
